@@ -78,6 +78,7 @@ namespace DAL.Migrations
                 {
                     IdProduct = table.Column<string>(type: "nvarchar(10)", nullable: false),
                     Name = table.Column<string>(type: "nvarchar(20)", nullable: true),
+                    Status = table.Column<string>(type: "nvarchar(20)", nullable: true),
                     SalePrice = table.Column<decimal>(type: "decimal(18,2)", nullable: false),
                     PurchasePrice = table.Column<decimal>(type: "decimal(18,2)", nullable: false),
                     UnitMeasure = table.Column<string>(type: "nvarchar(10)", nullable: true),

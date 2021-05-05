@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
@@ -12,6 +13,8 @@ namespace Entity
         public string Name { get; set; }
         [Column(TypeName= "nvarchar(11)")]
         public string Phone { get; set; }
+
+        public IList<Product> Products { get; set; }
 
     }
 }

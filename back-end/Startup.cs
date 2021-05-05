@@ -32,6 +32,11 @@ namespace back_end
             var connectionString=Configuration.GetConnectionString("DefaultConnection");
             services.AddDbContext<TestContext>(p=>p.UseSqlServer(connectionString));
 
+            services.AddControllersWithViews()
+            .AddNewtonsoftJson(options =>
+            options.SerializerSettings.ReferenceLoopHandling = Newtonsoft.Json.ReferenceLoopHandling.Ignore
+            );
+
             services.AddControllers();
             services.AddSwaggerGen(c =>
             {

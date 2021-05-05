@@ -130,6 +130,9 @@ namespace DAL.Migrations
                     b.Property<decimal>("SalePrice")
                         .HasColumnType("decimal(18,2)");
 
+                    b.Property<string>("Status")
+                        .HasColumnType("nvarchar(20)");
+
                     b.Property<string>("SupplierNit")
                         .HasColumnType("nvarchar(15)");
 
@@ -203,7 +206,7 @@ namespace DAL.Migrations
             modelBuilder.Entity("Entity.Product", b =>
                 {
                     b.HasOne("Entity.Supplier", "Supplier")
-                        .WithMany()
+                        .WithMany("Products")
                         .HasForeignKey("SupplierNit");
 
                     b.Navigation("Supplier");
@@ -212,6 +215,11 @@ namespace DAL.Migrations
             modelBuilder.Entity("Entity.Invoice", b =>
                 {
                     b.Navigation("InvoiceDetails");
+                });
+
+            modelBuilder.Entity("Entity.Supplier", b =>
+                {
+                    b.Navigation("Products");
                 });
 #pragma warning restore 612, 618
         }

@@ -12,6 +12,8 @@ namespace back_end.models
         [Required]
         public string Name { get; set; }
         [Required]
+        public string Status { get; set; }
+        [Required]
         [Range(1,99999999, ErrorMessage="Digite un precio de venta entre el rangoo de 1 a 99999999 años")]
         public decimal SalePrice { get; set; }
         [Required]
@@ -27,7 +29,7 @@ namespace back_end.models
         public int Iva { get; set; }
         [Required]
         public string Description { get; set; }
-        public  SupplierImputModel Supplier { get; set; }
+        public  SupplierInputModel Supplier { get; set; }
 
 
 
@@ -49,13 +51,14 @@ namespace back_end.models
         {
             IdProduct = product.IdProduct;
             Name = product.Name;
+            Status = product.Status;
             SalePrice = product.SalePrice;
             PurchasePrice = product.PurchasePrice;
             UnitMeasure = product.UnitMeasure;
             QuantityStock = product.QuantityStock;
             Iva = product.Iva;
             Description = product.Description;
-            Supplier = new SupplierImputModel();
+            Supplier = new SupplierInputModel();
             Supplier =  new SupplierViewModel(product.Supplier);
         }
     }

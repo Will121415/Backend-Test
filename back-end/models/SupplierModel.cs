@@ -3,7 +3,7 @@ using Entity;
 
 namespace back_end.models
 {
-    public class SupplierImputModel
+    public class SupplierInputModel
     {
         [Required]
         [MinLength(4,ErrorMessage="El codigo debe tener 4 caracteres")]
@@ -13,9 +13,20 @@ namespace back_end.models
         public string Name { get; set; }
         [Required]
         public string Phone { get; set; }
+
+        public Supplier MapSupplier(SupplierInputModel supplierImput)
+        {
+            Supplier supplier = new Supplier();
+
+            supplier.Nit = supplierImput.Nit;
+            supplier.Name = supplierImput.Name;
+            supplier.Phone = supplierImput.Phone;
+
+            return supplier;
+        }
     }
 
-    public class SupplierViewModel: SupplierImputModel
+    public class SupplierViewModel: SupplierInputModel
     {
         public SupplierViewModel() {}
 
