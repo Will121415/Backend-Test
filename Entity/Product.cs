@@ -8,6 +8,9 @@ namespace Entity
         [Key]
         [Column(TypeName= "nvarchar(10)")]
         public string  IdProduct { get; set; }
+        [Column(TypeName= "nvarchar(20)")]
+        public string Name { get; set; }
+        
         [Column(TypeName = "decimal(18,2)")]
         public decimal SalePrice { get; set; }
         [Column(TypeName = "decimal(18,2)")]
@@ -17,10 +20,10 @@ namespace Entity
         public float QuantityStock { get; set; }
         public int Iva { get; set; }
         public string Description { get; set; }
-        [NotMapped]
-        [Column(TypeName = "nvarchar(15)")]
-        public string IdSupplier { get; set; }
-        [ForeignKey("IdSupplier")]
+        // [NotMapped]
+        // [Column(TypeName = "nvarchar(15)")]
+        // public string IdSupplier { get; set; }
+        // [ForeignKey("IdSupplier")]
         public virtual Supplier Supplier { get; set; }
 
 

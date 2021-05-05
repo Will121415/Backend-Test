@@ -10,3 +10,15 @@ C:\Users\USUARIO\OneDrive\Documentos\DevZero\Prueba\Entity\obj\Debug\net5.0\Enti
 C:\Users\USUARIO\OneDrive\Documentos\DevZero\Prueba\Entity\obj\Debug\net5.0\Entity.dll
 C:\Users\USUARIO\OneDrive\Documentos\DevZero\Prueba\Entity\obj\Debug\net5.0\ref\Entity.dll
 C:\Users\USUARIO\OneDrive\Documentos\DevZero\Prueba\Entity\obj\Debug\net5.0\Entity.pdb
+C:\Users\USUARIO\OneDrive\Documentos\DevZero\Prueba\backend-test\Entity\bin\Debug\net5.0\Entity.deps.json
+C:\Users\USUARIO\OneDrive\Documentos\DevZero\Prueba\backend-test\Entity\bin\Debug\net5.0\Entity.dll
+C:\Users\USUARIO\OneDrive\Documentos\DevZero\Prueba\backend-test\Entity\bin\Debug\net5.0\ref\Entity.dll
+C:\Users\USUARIO\OneDrive\Documentos\DevZero\Prueba\backend-test\Entity\bin\Debug\net5.0\Entity.pdb
+C:\Users\USUARIO\OneDrive\Documentos\DevZero\Prueba\backend-test\Entity\obj\Debug\net5.0\Entity.csprojAssemblyReference.cache
+C:\Users\USUARIO\OneDrive\Documentos\DevZero\Prueba\backend-test\Entity\obj\Debug\net5.0\Entity.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\USUARIO\OneDrive\Documentos\DevZero\Prueba\backend-test\Entity\obj\Debug\net5.0\Entity.AssemblyInfoInputs.cache
+C:\Users\USUARIO\OneDrive\Documentos\DevZero\Prueba\backend-test\Entity\obj\Debug\net5.0\Entity.AssemblyInfo.cs
+C:\Users\USUARIO\OneDrive\Documentos\DevZero\Prueba\backend-test\Entity\obj\Debug\net5.0\Entity.csproj.CoreCompileInputs.cache
+C:\Users\USUARIO\OneDrive\Documentos\DevZero\Prueba\backend-test\Entity\obj\Debug\net5.0\Entity.dll
+C:\Users\USUARIO\OneDrive\Documentos\DevZero\Prueba\backend-test\Entity\obj\Debug\net5.0\ref\Entity.dll
+C:\Users\USUARIO\OneDrive\Documentos\DevZero\Prueba\backend-test\Entity\obj\Debug\net5.0\Entity.pdb

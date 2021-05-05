@@ -118,6 +118,9 @@ namespace DAL.Migrations
                     b.Property<int>("Iva")
                         .HasColumnType("int");
 
+                    b.Property<string>("Name")
+                        .HasColumnType("nvarchar(20)");
+
                     b.Property<decimal>("PurchasePrice")
                         .HasColumnType("decimal(18,2)");
 

@@ -12,13 +12,6 @@ namespace Entity
         public string Name { get; set; }
         [Column(TypeName= "nvarchar(11)")]
         public string Phone { get; set; }
-        
-        
-        
 
-
-
-        
-        
     }
 }

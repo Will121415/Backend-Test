@@ -10,8 +10,11 @@ namespace Entity
         [Key]
         [Column(TypeName= "nvarchar(4)")]
         public string IdInvoice{ get; set; }
+        [Column(TypeName = "decimal(18,2)")]
         public decimal Subtotal { get; set; }
+        [Column(TypeName = "decimal(18,2)")]
         public decimal TotalIva { get; set; }
+        [Column(TypeName = "decimal(18,2)")]
         public decimal Total { get; set; }
         [Column(TypeName= "nvarchar(30)")]
         public string SaleDate { get; set; }
