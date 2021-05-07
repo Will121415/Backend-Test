@@ -31,7 +31,7 @@ namespace back_end.Controllers
         {
             Client client = new Client();
 
-            client.Indentification = clientInput.Indentification;
+            client.IdClient = clientInput.IdClient;
             client.Name = clientInput.Name;
             client.LastName = clientInput.LastName;
             client.Phone = clientInput.Phone;
@@ -52,10 +52,10 @@ namespace back_end.Controllers
             return Ok(clients);
         }
         
-        [HttpGet("{identification}")]
-        public ActionResult<ClientViewModel> SearchById(string identification)
+        [HttpGet("{idClient}")]
+        public ActionResult<ClientViewModel> SearchById(string idClient)
         {
-            var response =  _clientService.FindById(identification);
+            var response =  _clientService.FindById(idClient);
 
             if(response.Object == null) return NotFound("Cliente no encontrado!");
             var client = new ClientViewModel(response.Object);

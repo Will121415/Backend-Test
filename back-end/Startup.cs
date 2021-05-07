@@ -57,6 +57,14 @@ namespace back_end
             app.UseHttpsRedirection();
 
             app.UseRouting();
+            #region global cors policy activate Authentication/Authorization
+            app.UseCors(x => x
+                .AllowAnyOrigin()
+                .AllowAnyMethod()
+                .AllowAnyHeader());
+
+            app.UseAuthentication();
+            #endregion
 
             app.UseAuthorization();
 

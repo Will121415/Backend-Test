@@ -10,7 +10,7 @@ namespace DAL.Migrations
                 name: "Clients",
                 columns: table => new
                 {
-                    Indentification = table.Column<string>(type: "nvarchar(11)", nullable: false),
+                    IdClient = table.Column<string>(type: "nvarchar(11)", nullable: false),
                     Name = table.Column<string>(type: "nvarchar(130)", nullable: true),
                     LastName = table.Column<string>(type: "nvarchar(30)", nullable: true),
                     Phone = table.Column<string>(type: "nvarchar(11)", nullable: true),
@@ -20,7 +20,7 @@ namespace DAL.Migrations
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_Clients", x => x.Indentification);
+                    table.PrimaryKey("PK_Clients", x => x.IdClient);
                 });
 
             migrationBuilder.CreateTable(
@@ -59,16 +59,16 @@ namespace DAL.Migrations
                     TotalIva = table.Column<decimal>(type: "decimal(18,2)", nullable: false),
                     Total = table.Column<decimal>(type: "decimal(18,2)", nullable: false),
                     SaleDate = table.Column<string>(type: "nvarchar(30)", nullable: true),
-                    ClientIndentification = table.Column<string>(type: "nvarchar(11)", nullable: true)
+                    IdClient = table.Column<string>(type: "nvarchar(11)", nullable: true)
                 },
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_Invoices", x => x.IdInvoice);
                     table.ForeignKey(
-                        name: "FK_Invoices_Clients_ClientIndentification",
-                        column: x => x.ClientIndentification,
+                        name: "FK_Invoices_Clients_IdClient",
+                        column: x => x.IdClient,
                         principalTable: "Clients",
-                        principalColumn: "Indentification",
+                        principalColumn: "IdClient",
                         onDelete: ReferentialAction.Restrict);
                 });
 
@@ -108,40 +108,40 @@ namespace DAL.Migrations
                     QuantityProduct = table.Column<float>(type: "real", nullable: false),
                     Discount = table.Column<float>(type: "real", nullable: false),
                     TolalDetail = table.Column<decimal>(type: "decimal(18,2)", nullable: false),
-                    ProductIdProduct = table.Column<string>(type: "nvarchar(10)", nullable: true),
-                    InvoiceIdInvoice = table.Column<string>(type: "nvarchar(4)", nullable: true)
+                    IdProduct = table.Column<string>(type: "nvarchar(10)", nullable: true),
+                    IdInvoice = table.Column<string>(type: "nvarchar(4)", nullable: true)
                 },
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_InvoiceDetails", x => x.IdDetail);
                     table.ForeignKey(
-                        name: "FK_InvoiceDetails_Invoices_InvoiceIdInvoice",
-                        column: x => x.InvoiceIdInvoice,
+                        name: "FK_InvoiceDetails_Invoices_IdInvoice",
+                        column: x => x.IdInvoice,
                         principalTable: "Invoices",
                         principalColumn: "IdInvoice",
                         onDelete: ReferentialAction.Restrict);
                     table.ForeignKey(
-                        name: "FK_InvoiceDetails_Products_ProductIdProduct",
-                        column: x => x.ProductIdProduct,
+                        name: "FK_InvoiceDetails_Products_IdProduct",
+                        column: x => x.IdProduct,
                         principalTable: "Products",
                         principalColumn: "IdProduct",
                         onDelete: ReferentialAction.Restrict);
                 });
 
             migrationBuilder.CreateIndex(
-                name: "IX_InvoiceDetails_InvoiceIdInvoice",
+                name: "IX_InvoiceDetails_IdInvoice",
                 table: "InvoiceDetails",
-                column: "InvoiceIdInvoice");
+                column: "IdInvoice");
 
             migrationBuilder.CreateIndex(
-                name: "IX_InvoiceDetails_ProductIdProduct",
+                name: "IX_InvoiceDetails_IdProduct",
                 table: "InvoiceDetails",
-                column: "ProductIdProduct");
+                column: "IdProduct");
 
             migrationBuilder.CreateIndex(
-                name: "IX_Invoices_ClientIndentification",
+                name: "IX_Invoices_IdClient",
                 table: "Invoices",
-                column: "ClientIndentification");
+                column: "IdClient");
 
             migrationBuilder.CreateIndex(
                 name: "IX_Products_SupplierNit",

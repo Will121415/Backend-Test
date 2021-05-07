@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
@@ -22,12 +23,6 @@ namespace Entity
         public float QuantityStock { get; set; }
         public int Iva { get; set; }
         public string Description { get; set; }
-        // [NotMapped]
-        // [Column(TypeName = "nvarchar(15)")]
-        // public string IdSupplier { get; set; }
-        // [ForeignKey("IdSupplier")]
         public  Supplier Supplier { get; set; }
-
-
     }
 }

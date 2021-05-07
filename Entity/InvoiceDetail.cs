@@ -15,13 +15,14 @@ namespace Entity
         public float Discount { get; set; }
         [Column(TypeName = "decimal(18,2)")]
         public decimal TolalDetail { get; set; }
-        [NotMapped]
-        public string IdInvoice { get; set; }
-        [NotMapped]
-        public string IdProduct { get; set; }
+
         [Column(TypeName = "nvarchar(10)")]
-        [ForeignKey("IdProduct")]
+        public string IdProduct { get; set; }
+        
+        [NotMapped]
         public virtual Product Product { get; set; }
+        
+        
         
         public InvoiceDetail()
         {
@@ -30,15 +31,15 @@ namespace Entity
 
         public InvoiceDetail(Product product, float quantity, float discount, decimal price)
         {
-            IdProduct = product.IdProduct;
             Product = product;
             UnitValue = price;
+            IdProduct = product.IdProduct;
             QuantityProduct = quantity;
             Discount = discount;
             CalculateTotalDetail();
-            CalculateIva();
         }
 
+       
         public void CalculateTotalDetail()
         {
             
@@ -48,7 +49,7 @@ namespace Entity
 
         public decimal CalculateIva()
         {
-            return TolalDetail * (Product.Iva  / 100) ;
+            return TolalDetail * ((decimal)Product.Iva  / (decimal)100);
         }
     }
 }

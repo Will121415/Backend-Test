@@ -26,11 +26,11 @@ namespace BLL
             }
         }
 
-        public Response<Client> FindById(string identification)
+        public Response<Client> FindById(string idClient)
         {
             try 
             {
-                Client client = _context.Clients.Where(c => c.Indentification == identification).FirstOrDefault();
+                Client client = _context.Clients.Where(c => c.IdClient == idClient).FirstOrDefault();
                 return new Response<Client>(client);
             }
             catch (Exception e)
@@ -53,11 +53,11 @@ namespace BLL
          public Response<Client> Modify(Client newClient)
         {
             try {
-                var oldClient =  _context.Clients.Find(newClient.Indentification);
+                var oldClient =  _context.Clients.Find(newClient.IdClient);
 
                 if (oldClient != null)
                 {
-                    oldClient.Indentification =  newClient.Indentification;
+                    oldClient.IdClient =  newClient.IdClient;
                     oldClient.Name = newClient.Name;
                     oldClient.LastName = newClient.LastName;
                     oldClient.Phone =  newClient.Phone;

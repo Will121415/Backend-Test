@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
@@ -7,7 +8,7 @@ namespace Entity
     {
         [Key]
         [Column(TypeName= "nvarchar(11)")]
-        public string Indentification { get; set; }
+        public string IdClient { get; set; }
         [Column(TypeName= "nvarchar(130)")]
         public string Name { get; set; }
         [Column(TypeName= "nvarchar(30)")]
@@ -20,6 +21,10 @@ namespace Entity
         public string Neighborhood { get; set; }
         [Column(TypeName= "nvarchar(20)")]
         public string City { get; set; }
+        [NotMapped]
+        public IList<Invoice> Invoices { get; set; }
+        
+        
 
     }
 }

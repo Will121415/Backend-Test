@@ -20,7 +20,7 @@ namespace DAL.Migrations
 
             modelBuilder.Entity("Entity.Client", b =>
                 {
-                    b.Property<string>("Indentification")
+                    b.Property<string>("IdClient")
                         .HasColumnType("nvarchar(11)");
 
                     b.Property<string>("Address")
@@ -41,7 +41,7 @@ namespace DAL.Migrations
                     b.Property<string>("Phone")
                         .HasColumnType("nvarchar(11)");
 
-                    b.HasKey("Indentification");
+                    b.HasKey("IdClient");
 
                     b.ToTable("Clients");
                 });
@@ -51,7 +51,7 @@ namespace DAL.Migrations
                     b.Property<string>("IdInvoice")
                         .HasColumnType("nvarchar(4)");
 
-                    b.Property<string>("ClientIndentification")
+                    b.Property<string>("IdClient")
                         .HasColumnType("nvarchar(11)");
 
                     b.Property<string>("SaleDate")
@@ -68,7 +68,7 @@ namespace DAL.Migrations
 
                     b.HasKey("IdInvoice");
 
-                    b.HasIndex("ClientIndentification");
+                    b.HasIndex("IdClient");
 
                     b.ToTable("Invoices");
                 });
@@ -83,10 +83,10 @@ namespace DAL.Migrations
                     b.Property<float>("Discount")
                         .HasColumnType("real");
 
-                    b.Property<string>("InvoiceIdInvoice")
+                    b.Property<string>("IdInvoice")
                         .HasColumnType("nvarchar(4)");
 
-                    b.Property<string>("ProductIdProduct")
+                    b.Property<string>("IdProduct")
                         .HasColumnType("nvarchar(10)");
 
                     b.Property<float>("QuantityProduct")
@@ -100,9 +100,9 @@ namespace DAL.Migrations
 
                     b.HasKey("IdDetail");
 
-                    b.HasIndex("InvoiceIdInvoice");
+                    b.HasIndex("IdInvoice");
 
-                    b.HasIndex("ProductIdProduct");
+                    b.HasIndex("IdProduct");
 
                     b.ToTable("InvoiceDetails");
                 });
@@ -183,24 +183,20 @@ namespace DAL.Migrations
 
             modelBuilder.Entity("Entity.Invoice", b =>
                 {
-                    b.HasOne("Entity.Client", "Client")
+                    b.HasOne("Entity.Client", null)
                         .WithMany()
-                        .HasForeignKey("ClientIndentification");
-
-                    b.Navigation("Client");
+                        .HasForeignKey("IdClient");
                 });
 
             modelBuilder.Entity("Entity.InvoiceDetail", b =>
                 {
                     b.HasOne("Entity.Invoice", null)
                         .WithMany("InvoiceDetails")
-                        .HasForeignKey("InvoiceIdInvoice");
+                        .HasForeignKey("IdInvoice");
 
-                    b.HasOne("Entity.Product", "Product")
+                    b.HasOne("Entity.Product", null)
                         .WithMany()
-                        .HasForeignKey("ProductIdProduct");
-
-                    b.Navigation("Product");
+                        .HasForeignKey("IdProduct");
                 });
 
             modelBuilder.Entity("Entity.Product", b =>

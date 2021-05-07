@@ -22,7 +22,7 @@ namespace BLL
                 var suppliers = _context.Suppliers.Include(s => s.Products);
                 if(suppliers == null) return new Response<Product>("No hay proveedores registrados");
 
-                var supplier = suppliers.Where(p => p.Nit == product.Supplier.Nit).FirstOrDefault();
+                var supplier = suppliers.Where(s => s.Nit == product.Supplier.Nit).FirstOrDefault();
                 if(supplier == null) return new Response<Product>("El proveedor no se encuentra registrado");
                 if(supplier.Products == null) supplier.Products = new List<Product>();
 

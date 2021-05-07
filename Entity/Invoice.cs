@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
@@ -18,27 +19,31 @@ namespace Entity
         public decimal Total { get; set; }
         [Column(TypeName= "nvarchar(30)")]
         public string SaleDate { get; set; }
-        [NotMapped]
-        public string IdClient { get; set; }
         [Column(TypeName= "nvarchar(11)")]
+        public string IdClient { get; set; }
         
-        [ForeignKey("IdClient")]
+        [NotMapped]
         public virtual Client Client { get; set; }
-        
-        
-        [Column(TypeName = "nvarchar(4)")]
+
+        [Column(TypeName= "nvarchar(4)")]
         [ForeignKey("IdInvoice")]
         public virtual IList<InvoiceDetail> InvoiceDetails { get; set; } 
 
-        public Invoice()
+        public Invoice() {
+            InvoiceDetails = new List<InvoiceDetail>();
+        }
+
+        public Invoice(string idIvoice, string idClient)
         {
+            IdInvoice = idIvoice;
+            IdClient = idClient;
+            SaleDate = DateTime.Now.ToString("dd/MM/yyyy"); 
             InvoiceDetails = new List<InvoiceDetail>();
         }
 
         public void AddInvoiceDetails(Product product, float quantity, float discount, decimal price)
         {
             InvoiceDetail invoiceDetail = new InvoiceDetail(product, quantity, discount, price);
-            invoiceDetail.IdInvoice = this.IdInvoice;
             InvoiceDetails.Add(invoiceDetail);
         }
 
@@ -49,13 +54,17 @@ namespace Entity
 
         public void CalcularTotalIva()
         {
-            TotalIva = InvoiceDetails.Sum(d => d.CalculateIva());
+            TotalIva = 0.0m;
+            foreach (var item in this.InvoiceDetails)
+            {
+                this.TotalIva +=  item.CalculateIva();
+            }
         }
 
         public void CalculateTotal()
         {
-            CalculateSubtotal();
-            CalcularTotalIva();
+            this.CalculateSubtotal();
+            this.CalcularTotalIva();
            
             Total = Subtotal + TotalIva ;
         }

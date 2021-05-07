@@ -9,7 +9,7 @@ namespace back_end.models
         [RegularExpression("(^[0-9]+$)", ErrorMessage = "Solo se permiten números")]
         [MinLength(10,ErrorMessage="El campo debe tener MINIMO 10 caracteres")]
         [StringLength(10,ErrorMessage="El campo debe tener MAXIMO 10 caracteres")]
-        public string Indentification { get; set; }
+        public string IdClient { get; set; }
         [Required]
         [RegularExpression(@"^[a-zA-Z]+$", ErrorMessage="Solo se permiten letras")]
         public string Name { get; set; }
@@ -37,7 +37,7 @@ namespace back_end.models
 
         public ClientViewModel(Client client)
         {
-            Indentification = client.Indentification;
+            IdClient = client.IdClient;
             Name = client.Name;
             LastName = client.LastName;
             Phone = client.Phone;
