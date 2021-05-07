@@ -76,6 +76,18 @@ namespace back_end.Controllers
 
             return product;
         }
+
+        //api/Invoice/Count
+        [HttpGet]
+        public ActionResult<int> Get() 
+        {
+            var response = _invoiceService.Count();
+            if (response.Error) return BadRequest(response.Message);
+
+            int result = (++response.Object);
+
+            return Ok(result);
+        } 
         
     }
 }

@@ -36,5 +36,15 @@ namespace BLL
                 return new Response<Invoice>($"Error del aplicacion: {e.Message}");
             }
         }
+
+        public Response<int> Count()
+        {
+            try {
+                int count =  _context.Invoices.Count();
+                return new Response<int>(count);
+            } catch (Exception e) {
+                return new Response<int>($"Error del aplicacion: {e.Message}");
+            }
+        }
     }
 }
