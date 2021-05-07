@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\USUARIO\\OneDrive\\Documentos\\DevZero\\Prueba\\backend-test\\Entity\\Entity.csproj": {}
+    "C:\\Users\\USUARIO\\AndroidStudioProjects\\Backend-Test\\Entity\\Entity.csproj": {}
   },
   "projects": {
-    "C:\\Users\\USUARIO\\OneDrive\\Documentos\\DevZero\\Prueba\\backend-test\\Entity\\Entity.csproj": {
+    "C:\\Users\\USUARIO\\AndroidStudioProjects\\Backend-Test\\Entity\\Entity.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\USUARIO\\OneDrive\\Documentos\\DevZero\\Prueba\\backend-test\\Entity\\Entity.csproj",
+        "projectUniqueName": "C:\\Users\\USUARIO\\AndroidStudioProjects\\Backend-Test\\Entity\\Entity.csproj",
         "projectName": "Entity",
-        "projectPath": "C:\\Users\\USUARIO\\OneDrive\\Documentos\\DevZero\\Prueba\\backend-test\\Entity\\Entity.csproj",
+        "projectPath": "C:\\Users\\USUARIO\\AndroidStudioProjects\\Backend-Test\\Entity\\Entity.csproj",
         "packagesPath": "C:\\Users\\USUARIO\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\USUARIO\\OneDrive\\Documentos\\DevZero\\Prueba\\backend-test\\Entity\\obj\\",
+        "outputPath": "C:\\Users\\USUARIO\\AndroidStudioProjects\\Backend-Test\\Entity\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\USUARIO\\AppData\\Roaming\\NuGet\\NuGet.Config"

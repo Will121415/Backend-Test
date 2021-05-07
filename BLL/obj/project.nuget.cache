@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "g0CJeGJzkZP+hP+cba5WKbOs9YSN/PfEbyJ7ItoPxQkF2hdGU0kRI8e/7d8v/ioGfTXKjCj1zuSUOYXlIGM9ig==",
+  "dgSpecHash": "EJLuLGEml1N1ndb3ATJxyjrPcUHUpaH7D9T2S7OXhPOOhlIQ/dki+g8FYjJLIFzY/iYh2DRLx9cs5+EnEaICrg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\USUARIO\\OneDrive\\Documentos\\DevZero\\Prueba\\backend-test\\BLL\\BLL.csproj",
+  "projectFilePath": "C:\\Users\\USUARIO\\AndroidStudioProjects\\Backend-Test\\BLL\\BLL.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\USUARIO\\.nuget\\packages\\microsoft.csharp\\4.5.0\\microsoft.csharp.4.5.0.nupkg.sha512",
     "C:\\Users\\USUARIO\\.nuget\\packages\\microsoft.data.sqlclient\\2.0.1\\microsoft.data.sqlclient.2.0.1.nupkg.sha512",

@@ -5746,11 +5746,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\USUARIO\\OneDrive\\Documentos\\DevZero\\Prueba\\backend-test\\BLL\\BLL.csproj",
+      "projectUniqueName": "C:\\Users\\USUARIO\\AndroidStudioProjects\\Backend-Test\\BLL\\BLL.csproj",
       "projectName": "BLL",
-      "projectPath": "C:\\Users\\USUARIO\\OneDrive\\Documentos\\DevZero\\Prueba\\backend-test\\BLL\\BLL.csproj",
+      "projectPath": "C:\\Users\\USUARIO\\AndroidStudioProjects\\Backend-Test\\BLL\\BLL.csproj",
       "packagesPath": "C:\\Users\\USUARIO\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\USUARIO\\OneDrive\\Documentos\\DevZero\\Prueba\\backend-test\\BLL\\obj\\",
+      "outputPath": "C:\\Users\\USUARIO\\AndroidStudioProjects\\Backend-Test\\BLL\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\USUARIO\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -5765,11 +5765,11 @@
         "net5.0": {
           "targetAlias": "net5.0",
           "projectReferences": {
-            "C:\\Users\\USUARIO\\OneDrive\\Documentos\\DevZero\\Prueba\\backend-test\\DAL\\DAL.csproj": {
-              "projectPath": "C:\\Users\\USUARIO\\OneDrive\\Documentos\\DevZero\\Prueba\\backend-test\\DAL\\DAL.csproj"
+            "C:\\Users\\USUARIO\\AndroidStudioProjects\\Backend-Test\\DAL\\DAL.csproj": {
+              "projectPath": "C:\\Users\\USUARIO\\AndroidStudioProjects\\Backend-Test\\DAL\\DAL.csproj"
             },
-            "C:\\Users\\USUARIO\\OneDrive\\Documentos\\DevZero\\Prueba\\backend-test\\Entity\\Entity.csproj": {
-              "projectPath": "C:\\Users\\USUARIO\\OneDrive\\Documentos\\DevZero\\Prueba\\backend-test\\Entity\\Entity.csproj"
+            "C:\\Users\\USUARIO\\AndroidStudioProjects\\Backend-Test\\Entity\\Entity.csproj": {
+              "projectPath": "C:\\Users\\USUARIO\\AndroidStudioProjects\\Backend-Test\\Entity\\Entity.csproj"
             }
           }
         }

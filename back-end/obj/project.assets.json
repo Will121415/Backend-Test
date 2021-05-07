@@ -5748,11 +5748,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\USUARIO\\OneDrive\\Documentos\\DevZero\\Prueba\\backend-test\\back-end\\back-end.csproj",
+      "projectUniqueName": "C:\\Users\\USUARIO\\AndroidStudioProjects\\Backend-Test\\back-end\\back-end.csproj",
       "projectName": "back-end",
-      "projectPath": "C:\\Users\\USUARIO\\OneDrive\\Documentos\\DevZero\\Prueba\\backend-test\\back-end\\back-end.csproj",
+      "projectPath": "C:\\Users\\USUARIO\\AndroidStudioProjects\\Backend-Test\\back-end\\back-end.csproj",
       "packagesPath": "C:\\Users\\USUARIO\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\USUARIO\\OneDrive\\Documentos\\DevZero\\Prueba\\backend-test\\back-end\\obj\\",
+      "outputPath": "C:\\Users\\USUARIO\\AndroidStudioProjects\\Backend-Test\\back-end\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\USUARIO\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -5767,14 +5767,14 @@
         "net5.0": {
           "targetAlias": "net5.0",
           "projectReferences": {
-            "C:\\Users\\USUARIO\\OneDrive\\Documentos\\DevZero\\Prueba\\backend-test\\BLL\\BLL.csproj": {
-              "projectPath": "C:\\Users\\USUARIO\\OneDrive\\Documentos\\DevZero\\Prueba\\backend-test\\BLL\\BLL.csproj"
+            "C:\\Users\\USUARIO\\AndroidStudioProjects\\Backend-Test\\BLL\\BLL.csproj": {
+              "projectPath": "C:\\Users\\USUARIO\\AndroidStudioProjects\\Backend-Test\\BLL\\BLL.csproj"
             },
-            "C:\\Users\\USUARIO\\OneDrive\\Documentos\\DevZero\\Prueba\\backend-test\\DAL\\DAL.csproj": {
-              "projectPath": "C:\\Users\\USUARIO\\OneDrive\\Documentos\\DevZero\\Prueba\\backend-test\\DAL\\DAL.csproj"
+            "C:\\Users\\USUARIO\\AndroidStudioProjects\\Backend-Test\\DAL\\DAL.csproj": {
+              "projectPath": "C:\\Users\\USUARIO\\AndroidStudioProjects\\Backend-Test\\DAL\\DAL.csproj"
             },
-            "C:\\Users\\USUARIO\\OneDrive\\Documentos\\DevZero\\Prueba\\backend-test\\Entity\\Entity.csproj": {
-              "projectPath": "C:\\Users\\USUARIO\\OneDrive\\Documentos\\DevZero\\Prueba\\backend-test\\Entity\\Entity.csproj"
+            "C:\\Users\\USUARIO\\AndroidStudioProjects\\Backend-Test\\Entity\\Entity.csproj": {
+              "projectPath": "C:\\Users\\USUARIO\\AndroidStudioProjects\\Backend-Test\\Entity\\Entity.csproj"
             }
           }
         }
