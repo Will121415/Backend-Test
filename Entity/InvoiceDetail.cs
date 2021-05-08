@@ -18,7 +18,8 @@ namespace Entity
 
         [Column(TypeName = "nvarchar(10)")]
         public string IdProduct { get; set; }
-        
+        [NotMapped]
+        public string InvoiceIdInvoice { get; set; }
         [NotMapped]
         public virtual Product Product { get; set; }
         

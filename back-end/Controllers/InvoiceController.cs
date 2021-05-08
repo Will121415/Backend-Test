@@ -1,3 +1,4 @@
+using System.Linq;
 using back_end.models;
 using BLL;
 using DAL;
@@ -79,14 +80,26 @@ namespace back_end.Controllers
 
         //api/Invoice/Count
         [HttpGet]
-        public ActionResult<int> Get() 
+        public ActionResult<dynamic> Get(string typeRequest) 
         {
-            var response = _invoiceService.Count();
-            if (response.Error) return BadRequest(response.Message);
+           if (typeRequest == "Count") 
+           {
+                var response = _invoiceService.Count();
+                if (response.Error) return BadRequest(response.Message);
 
-            int result = (++response.Object);
+                 int result = (++response.Object);
 
-            return Ok(result);
+                 return Ok(result);
+           } else 
+           {
+                var response = _invoiceService.AllInvoices();
+
+                if (response.Objects == null) return BadRequest(response.Message);
+
+                var invoices = response.Objects.Select(i => new InvoiceViewModel(i));
+
+                return Ok(invoices);
+           }
         } 
         
     }

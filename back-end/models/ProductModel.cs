@@ -59,7 +59,7 @@ namespace back_end.models
             Iva = product.Iva;
             Description = product.Description;
             Supplier = new SupplierInputModel();
-            Supplier =  new SupplierViewModel(product.Supplier);
+            Supplier = (product.Supplier != null) ? new SupplierViewModel(product.Supplier): null;
         }
     }
     

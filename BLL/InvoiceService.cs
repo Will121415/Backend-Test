@@ -37,6 +37,48 @@ namespace BLL
             }
         }
 
+        public ResponseList<Invoice> AllInvoices()
+        {
+            try {
+                var invoices = _context.Invoices.ToList();
+                var clients = _context.Clients.ToList();
+                var details = _context.InvoiceDetails.ToList();
+                var products = _context.Products.ToList();
+
+                foreach (Invoice invoice1 in invoices) {
+                    foreach (Client client in clients) {
+                        if (invoice1.IdClient == client.IdClient) {
+                            invoice1.Client = client;
+                            break;
+                        }
+                    }
+                }
+
+                foreach (InvoiceDetail detail in details) {
+                    foreach (Product product in products) {
+                        if (detail.IdProduct == product.IdProduct) {
+                            detail.Product = product;
+                            break;
+                        }
+                    }
+                }
+
+                 foreach (Invoice invoice in invoices) {
+                    foreach(InvoiceDetail detail in details) {
+                        if (invoice.IdInvoice == detail.InvoiceIdInvoice) {
+                            invoice.InvoiceDetails.Add(detail);
+                        }
+                    }
+
+                }
+
+                return new ResponseList<Invoice>(invoices);
+
+            } catch (Exception e ) {
+                return new ResponseList<Invoice>($"Error del aplicacion: {e.Message}");
+            }
+        }
+
         public Response<int> Count()
         {
             try {
