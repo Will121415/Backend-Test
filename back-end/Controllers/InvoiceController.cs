@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using System.Linq;
 using back_end.models;
 using BLL;
@@ -80,18 +81,8 @@ namespace back_end.Controllers
 
         //api/Invoice/Count
         [HttpGet]
-        public ActionResult<dynamic> Get(string typeRequest) 
+        public ActionResult<IEnumerable<InvoiceViewModel>> Get() 
         {
-           if (typeRequest == "Count") 
-           {
-                var response = _invoiceService.Count();
-                if (response.Error) return BadRequest(response.Message);
-
-                 int result = (++response.Object);
-
-                 return Ok(result);
-           } else 
-           {
                 var response = _invoiceService.AllInvoices();
 
                 if (response.Objects == null) return BadRequest(response.Message);
@@ -99,7 +90,6 @@ namespace back_end.Controllers
                 var invoices = response.Objects.Select(i => new InvoiceViewModel(i));
 
                 return Ok(invoices);
-           }
         } 
         
     }
