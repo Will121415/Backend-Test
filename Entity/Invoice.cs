@@ -23,11 +23,11 @@ namespace Entity
         public string IdClient { get; set; }
         
         [NotMapped]
-        public virtual Client Client { get; set; }
+        public  Client Client { get; set; }
 
         [Column(TypeName= "nvarchar(4)")]
         [ForeignKey("IdInvoice")]
-        public virtual IList<InvoiceDetail> InvoiceDetails { get; set; } 
+        public  IList<InvoiceDetail> InvoiceDetails { get; set; } 
 
         public Invoice() {
             InvoiceDetails = new List<InvoiceDetail>();

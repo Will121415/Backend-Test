@@ -21,7 +21,7 @@ namespace Entity
         [NotMapped]
         public string InvoiceIdInvoice { get; set; }
         [NotMapped]
-        public virtual Product Product { get; set; }
+        public  Product Product { get; set; }
         
         
         
