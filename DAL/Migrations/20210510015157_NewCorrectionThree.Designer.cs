@@ -9,8 +9,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace DAL.Migrations
 {
     [DbContext(typeof(TestContext))]
-    [Migration("20210507152805_InitialCreate")]
-    partial class InitialCreate
+    [Migration("20210510015157_NewCorrectionThree")]
+    partial class NewCorrectionThree
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -30,6 +30,9 @@ namespace DAL.Migrations
 
                     b.Property<string>("City")
                         .HasColumnType("nvarchar(20)");
+
+                    b.Property<int>("Id")
+                        .HasColumnType("int");
 
                     b.Property<string>("LastName")
                         .HasColumnType("nvarchar(30)");
@@ -52,6 +55,9 @@ namespace DAL.Migrations
                 {
                     b.Property<string>("IdInvoice")
                         .HasColumnType("nvarchar(4)");
+
+                    b.Property<int>("Id")
+                        .HasColumnType("int");
 
                     b.Property<string>("IdClient")
                         .HasColumnType("nvarchar(11)");
@@ -84,6 +90,9 @@ namespace DAL.Migrations
 
                     b.Property<float>("Discount")
                         .HasColumnType("real");
+
+                    b.Property<int>("Id")
+                        .HasColumnType("int");
 
                     b.Property<string>("IdInvoice")
                         .HasColumnType("nvarchar(4)");
@@ -153,6 +162,9 @@ namespace DAL.Migrations
                     b.Property<string>("Nit")
                         .HasColumnType("nvarchar(15)");
 
+                    b.Property<int>("Id")
+                        .HasColumnType("int");
+
                     b.Property<string>("Name")
                         .HasColumnType("nvarchar(30)");
 
@@ -166,11 +178,13 @@ namespace DAL.Migrations
 
             modelBuilder.Entity("Entity.User", b =>
                 {
-                    b.Property<string>("UserName")
-                        .HasColumnType("nvarchar(30)");
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
                     b.Property<string>("Password")
-                        .HasColumnType("nvarchar(30)");
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Role")
                         .HasColumnType("nvarchar(15)");
@@ -178,7 +192,10 @@ namespace DAL.Migrations
                     b.Property<string>("Status")
                         .HasColumnType("nvarchar(15)");
 
-                    b.HasKey("UserName");
+                    b.Property<string>("UserName")
+                        .HasColumnType("nvarchar(30)");
+
+                    b.HasKey("Id");
 
                     b.ToTable("Users");
                 });

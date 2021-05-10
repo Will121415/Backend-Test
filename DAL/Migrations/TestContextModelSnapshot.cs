@@ -176,11 +176,10 @@ namespace DAL.Migrations
 
             modelBuilder.Entity("Entity.User", b =>
                 {
-                    b.Property<string>("UserName")
-                        .HasColumnType("nvarchar(30)");
-
                     b.Property<int>("Id")
-                        .HasColumnType("int");
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
                     b.Property<string>("Password")
                         .HasColumnType("nvarchar(max)");
@@ -191,7 +190,10 @@ namespace DAL.Migrations
                     b.Property<string>("Status")
                         .HasColumnType("nvarchar(15)");
 
-                    b.HasKey("UserName");
+                    b.Property<string>("UserName")
+                        .HasColumnType("nvarchar(30)");
+
+                    b.HasKey("Id");
 
                     b.ToTable("Users");
                 });

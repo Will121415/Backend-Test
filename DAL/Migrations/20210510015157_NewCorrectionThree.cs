@@ -2,7 +2,7 @@
 
 namespace DAL.Migrations
 {
-    public partial class InitialCreate : Migration
+    public partial class NewCorrectionThree : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -16,7 +16,8 @@ namespace DAL.Migrations
                     Phone = table.Column<string>(type: "nvarchar(11)", nullable: true),
                     Address = table.Column<string>(type: "nvarchar(50)", nullable: true),
                     Neighborhood = table.Column<string>(type: "nvarchar(30)", nullable: true),
-                    City = table.Column<string>(type: "nvarchar(20)", nullable: true)
+                    City = table.Column<string>(type: "nvarchar(20)", nullable: true),
+                    Id = table.Column<int>(type: "int", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -29,7 +30,8 @@ namespace DAL.Migrations
                 {
                     Nit = table.Column<string>(type: "nvarchar(15)", nullable: false),
                     Name = table.Column<string>(type: "nvarchar(30)", nullable: true),
-                    Phone = table.Column<string>(type: "nvarchar(11)", nullable: true)
+                    Phone = table.Column<string>(type: "nvarchar(11)", nullable: true),
+                    Id = table.Column<int>(type: "int", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -40,14 +42,16 @@ namespace DAL.Migrations
                 name: "Users",
                 columns: table => new
                 {
-                    UserName = table.Column<string>(type: "nvarchar(30)", nullable: false),
-                    Password = table.Column<string>(type: "nvarchar(30)", nullable: true),
+                    Id = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    UserName = table.Column<string>(type: "nvarchar(30)", nullable: true),
+                    Password = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     Status = table.Column<string>(type: "nvarchar(15)", nullable: true),
                     Role = table.Column<string>(type: "nvarchar(15)", nullable: true)
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_Users", x => x.UserName);
+                    table.PrimaryKey("PK_Users", x => x.Id);
                 });
 
             migrationBuilder.CreateTable(
@@ -59,7 +63,8 @@ namespace DAL.Migrations
                     TotalIva = table.Column<decimal>(type: "decimal(18,2)", nullable: false),
                     Total = table.Column<decimal>(type: "decimal(18,2)", nullable: false),
                     SaleDate = table.Column<string>(type: "nvarchar(30)", nullable: true),
-                    IdClient = table.Column<string>(type: "nvarchar(11)", nullable: true)
+                    IdClient = table.Column<string>(type: "nvarchar(11)", nullable: true),
+                    Id = table.Column<int>(type: "int", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -109,7 +114,8 @@ namespace DAL.Migrations
                     Discount = table.Column<float>(type: "real", nullable: false),
                     TolalDetail = table.Column<decimal>(type: "decimal(18,2)", nullable: false),
                     IdProduct = table.Column<string>(type: "nvarchar(10)", nullable: true),
-                    IdInvoice = table.Column<string>(type: "nvarchar(4)", nullable: true)
+                    IdInvoice = table.Column<string>(type: "nvarchar(4)", nullable: true),
+                    Id = table.Column<int>(type: "int", nullable: false)
                 },
                 constraints: table =>
                 {
