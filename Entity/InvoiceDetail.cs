@@ -4,7 +4,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Entity
 {
-    public class InvoiceDetail: Entity<int>
+    public class InvoiceDetail
     {
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]

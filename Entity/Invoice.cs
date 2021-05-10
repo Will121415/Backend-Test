@@ -6,7 +6,7 @@ using System.Linq;
 
 namespace Entity
 {
-    public class Invoice: Entity<int>
+    public class Invoice
     {
         [Key]
         [Column(TypeName= "nvarchar(4)")]
