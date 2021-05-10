@@ -49,3 +49,5 @@ C:\Users\USUARIO\AndroidStudioProjects\Backend-Test\BLL\obj\Debug\net5.0\BLL.csp
 C:\Users\USUARIO\AndroidStudioProjects\Backend-Test\BLL\obj\Debug\net5.0\BLL.dll
 C:\Users\USUARIO\AndroidStudioProjects\Backend-Test\BLL\obj\Debug\net5.0\ref\BLL.dll
 C:\Users\USUARIO\AndroidStudioProjects\Backend-Test\BLL\obj\Debug\net5.0\BLL.pdb
+C:\Users\USUARIO\AndroidStudioProjects\Backend-Test\BLL\bin\Debug\net5.0\Infrastructure.dll
+C:\Users\USUARIO\AndroidStudioProjects\Backend-Test\BLL\bin\Debug\net5.0\Infrastructure.pdb

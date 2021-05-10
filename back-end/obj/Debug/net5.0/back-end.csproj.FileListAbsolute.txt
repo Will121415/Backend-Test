@@ -208,3 +208,5 @@ C:\Users\USUARIO\AndroidStudioProjects\Backend-Test\back-end\obj\Debug\net5.0\ba
 C:\Users\USUARIO\AndroidStudioProjects\Backend-Test\back-end\obj\Debug\net5.0\ref\back-end.dll
 C:\Users\USUARIO\AndroidStudioProjects\Backend-Test\back-end\obj\Debug\net5.0\back-end.pdb
 C:\Users\USUARIO\AndroidStudioProjects\Backend-Test\back-end\obj\Debug\net5.0\back-end.genruntimeconfig.cache
+C:\Users\USUARIO\AndroidStudioProjects\Backend-Test\back-end\bin\Debug\net5.0\Infrastructure.dll
+C:\Users\USUARIO\AndroidStudioProjects\Backend-Test\back-end\bin\Debug\net5.0\Infrastructure.pdb

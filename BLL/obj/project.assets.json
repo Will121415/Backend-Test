@@ -1510,6 +1510,16 @@
         "runtime": {
           "bin/placeholder/Entity.dll": {}
         }
+      },
+      "Infrastructure/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v5.0",
+        "compile": {
+          "bin/placeholder/Infrastructure.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Infrastructure.dll": {}
+        }
       }
     }
   },
@@ -5732,12 +5742,18 @@
       "type": "project",
       "path": "../Entity/Entity.csproj",
       "msbuildProject": "../Entity/Entity.csproj"
+    },
+    "Infrastructure/1.0.0": {
+      "type": "project",
+      "path": "../Infrastructure/Infrastructure.csproj",
+      "msbuildProject": "../Infrastructure/Infrastructure.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net5.0": [
       "DAL >= 1.0.0",
-      "Entity >= 1.0.0"
+      "Entity >= 1.0.0",
+      "Infrastructure >= 1.0.0"
     ]
   },
   "packageFolders": {
@@ -5746,11 +5762,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\USUARIO\\AndroidStudioProjects\\Backend-Test\\BLL\\BLL.csproj",
+      "projectUniqueName": "c:\\Users\\USUARIO\\AndroidStudioProjects\\Backend-Test\\BLL\\BLL.csproj",
       "projectName": "BLL",
-      "projectPath": "C:\\Users\\USUARIO\\AndroidStudioProjects\\Backend-Test\\BLL\\BLL.csproj",
+      "projectPath": "c:\\Users\\USUARIO\\AndroidStudioProjects\\Backend-Test\\BLL\\BLL.csproj",
       "packagesPath": "C:\\Users\\USUARIO\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\USUARIO\\AndroidStudioProjects\\Backend-Test\\BLL\\obj\\",
+      "outputPath": "c:\\Users\\USUARIO\\AndroidStudioProjects\\Backend-Test\\BLL\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\USUARIO\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -5770,6 +5786,9 @@
             },
             "C:\\Users\\USUARIO\\AndroidStudioProjects\\Backend-Test\\Entity\\Entity.csproj": {
               "projectPath": "C:\\Users\\USUARIO\\AndroidStudioProjects\\Backend-Test\\Entity\\Entity.csproj"
+            },
+            "C:\\Users\\USUARIO\\AndroidStudioProjects\\Backend-Test\\Infrastructure\\Infrastructure.csproj": {
+              "projectPath": "C:\\Users\\USUARIO\\AndroidStudioProjects\\Backend-Test\\Infrastructure\\Infrastructure.csproj"
             }
           }
         }

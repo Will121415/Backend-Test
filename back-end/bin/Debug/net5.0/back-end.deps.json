@@ -1347,7 +1347,8 @@
       "BLL/1.0.0": {
         "dependencies": {
           "DAL": "1.0.0",
-          "Entity": "1.0.0"
+          "Entity": "1.0.0",
+          "Infrastructure": "1.0.0"
         },
         "runtime": {
           "BLL.dll": {}
@@ -1379,6 +1380,14 @@
         },
         "compile": {
           "Entity.dll": {}
+        }
+      },
+      "Infrastructure/1.0.0": {
+        "runtime": {
+          "Infrastructure.dll": {}
+        },
+        "compile": {
+          "Infrastructure.dll": {}
         }
       },
       "Microsoft.AspNetCore.Antiforgery/5.0.0.0": {
@@ -3800,6 +3809,11 @@
       "sha512": ""
     },
     "Entity/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Infrastructure/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

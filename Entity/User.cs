@@ -3,12 +3,11 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Entity
 {
-    public class User
+    public class User: Entity<int>
     {
         [Key]
         [Column(TypeName= "nvarchar(30)")]
         public string UserName { get; set; }
-        [Column(TypeName= "nvarchar(30)")]
         public string Password { get; set; }
         [Column(TypeName= "nvarchar(15)")]
         public string Status { get; set; }

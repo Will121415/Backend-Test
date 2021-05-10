@@ -29,6 +29,9 @@ namespace DAL.Migrations
                     b.Property<string>("City")
                         .HasColumnType("nvarchar(20)");
 
+                    b.Property<int>("Id")
+                        .HasColumnType("int");
+
                     b.Property<string>("LastName")
                         .HasColumnType("nvarchar(30)");
 
@@ -50,6 +53,9 @@ namespace DAL.Migrations
                 {
                     b.Property<string>("IdInvoice")
                         .HasColumnType("nvarchar(4)");
+
+                    b.Property<int>("Id")
+                        .HasColumnType("int");
 
                     b.Property<string>("IdClient")
                         .HasColumnType("nvarchar(11)");
@@ -82,6 +88,9 @@ namespace DAL.Migrations
 
                     b.Property<float>("Discount")
                         .HasColumnType("real");
+
+                    b.Property<int>("Id")
+                        .HasColumnType("int");
 
                     b.Property<string>("IdInvoice")
                         .HasColumnType("nvarchar(4)");
@@ -151,6 +160,9 @@ namespace DAL.Migrations
                     b.Property<string>("Nit")
                         .HasColumnType("nvarchar(15)");
 
+                    b.Property<int>("Id")
+                        .HasColumnType("int");
+
                     b.Property<string>("Name")
                         .HasColumnType("nvarchar(30)");
 
@@ -167,8 +179,11 @@ namespace DAL.Migrations
                     b.Property<string>("UserName")
                         .HasColumnType("nvarchar(30)");
 
+                    b.Property<int>("Id")
+                        .HasColumnType("int");
+
                     b.Property<string>("Password")
-                        .HasColumnType("nvarchar(30)");
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Role")
                         .HasColumnType("nvarchar(15)");
